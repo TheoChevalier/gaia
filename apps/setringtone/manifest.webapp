@@ -1,40 +1,42 @@
 {
-  "name": "Set Ringtone",
-  "description": "Gaia Ringtone Setter",
-  "type": "certified",
-  "role": "system",
-  "orientation": "default",
-  "developer": {
-    "name": "The Gaia Team",
-    "url": "https://github.com/mozilla-b2g/gaia"
-  },
-  "permissions": {
-    "settings":{ "access": "readwrite" }
-  },
   "activities": {
     "share": {
+      "href": "/share.html", 
+      "returnValue": true, 
+      "disposition": "inline", 
       "filters": {
         "type": {
-          "required": true,
-          "pattern": "^audio/.*$"
-        },
+          "pattern": "^audio/.*$", 
+          "required": true
+        }, 
         "number": 1
-      },
-      "disposition": "inline",
-      "returnValue": true,
-      "href": "/share.html"
+      }
     }
-  },
+  }, 
+  "orientation": "default", 
+  "default_locale": "en-US", 
   "icons": {
-    "60": "/style/icons/Ringtones_60.png",
-    "90": "/style/icons/Ringtones_90.png",
+    "60": "/style/icons/Ringtones_60.png", 
+    "90": "/style/icons/Ringtones_90.png", 
     "120": "/style/icons/Ringtones_120.png"
-  },
+  }, 
+  "description": "Gaia Ringtone Setter", 
+  "name": "Set Ringtone", 
+  "role": "system", 
+  "permissions": {
+    "settings": {
+      "access": "readwrite"
+    }
+  }, 
+  "type": "certified", 
   "locales": {
     "en-US": {
-      "name": "Set Ringtone",
+      "name": "Set Ringtone", 
       "description": "Gaia Ringtone Setter"
     }
-  },
-  "default_locale": "en-US"
+  }, 
+  "developer": {
+    "url": "https://github.com/mozilla-b2g/gaia", 
+    "name": "The Gaia Team"
+  }
 }

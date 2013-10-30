@@ -1,31 +1,49 @@
 {
-  "name": "WAP Push manager",
-  "description": "Receives, filters and displays WAP Push messages",
-  "type": "certified",
-  "role": "system",
-  "launch_path": "/index.html",
-  "developer": {
-    "name": "The Gaia Team",
-    "url": "https://github.com/mozilla-b2g/gaia"
-  },
-  "locales": {
-    "en-US": {
-      "name": "WAP Push manager",
-      "description": "Receives, filters and displays WAP Push messages"
-    }
-  },
-  "default_locale": "en-US",
+  "name": "WAP Push manager", 
+  "default_locale": "en-US", 
   "icons": {
     "30": "/style/icons/wappush.png"
-  },
-  "orientation": "default",
+  }, 
+  "orientation": "default", 
+  "description": "Receives, filters and displays WAP Push messages", 
   "messages": [
-     { "notification": "/index.html" },
-     { "wappush-received": "/index.html" }
-  ],
+    {
+      "notification": "/index.html"
+    }, 
+    {
+      "wappush-received": "/index.html"
+    }
+  ], 
+  "role": "system", 
+  "launch_path": "/index.html", 
   "permissions": {
-    "desktop-notification": {},
-    "settings": { "access": "readwrite" },
-    "wappush": {}
+    "wappush": {}, 
+    "desktop-notification": {}, 
+    "settings": {
+      "access": "readwrite"
+    }
+  }, 
+  "type": "certified", 
+  "locales": {
+    "fr": {
+      "name": "Gestionnaire Push WAP", 
+      "description": "Re\u00e7oit, filtre et affiche les messages Push WAP"
+    }, 
+    "ro": {
+      "name": "Manager WAP Push", 
+      "description": "Prime\u0219te, filtreaz\u0103 \u0219i afi\u0219eaz\u0103 mesaje WAP Push"
+    }, 
+    "en-US": {
+      "name": "WAP Push manager", 
+      "description": "Receives, filters and displays WAP Push messages"
+    }, 
+    "it": {
+      "name": "Gestione push WAP", 
+      "description": "Ricevi, filtra e visualizza messaggi push WAP"
+    }
+  }, 
+  "developer": {
+    "url": "https://github.com/mozilla-b2g/gaia", 
+    "name": "The Gaia Team"
   }
 }

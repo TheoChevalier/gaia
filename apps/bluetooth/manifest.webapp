@@ -1,38 +1,59 @@
 {
-  "name": "Send To Bluetooth Device",
-  "type": "certified",
-  "role": "system",
-  "description": "Gaia Bluetooth Transfer",
-  "launch_path": "/transfer.html",
-  "developer": {
-    "name": "The Gaia Team",
-    "url": "https://github.com/mozilla-b2g/gaia"
-  },
-  "locales": {
-    "en-US": {
-      "name": "Bluetooth Transfer",
-      "description": "Gaia Bluetooth Transfer"
-    }
-  },
-  "icons": {
-    "60": "/style/icons/60/Bluetooth.png",
-    "120": "/style/icons/Bluetooth.png"
-  },
-  "orientation": "default",
   "activities": {
     "share": {
+      "href": "/transfer.html", 
+      "returnValue": true, 
+      "disposition": "inline", 
       "filters": {
-        "type": ["image/*", "audio/*", "video/*", "text/vcard"],
-        "blobs": { "required":true }
-       },
-      "disposition": "inline",
-      "returnValue": true,
-      "href": "/transfer.html"
+        "type": [
+          "image/*", 
+          "audio/*", 
+          "video/*", 
+          "text/vcard"
+        ], 
+        "blobs": {
+          "required": true
+        }
+      }
     }
-  },
+  }, 
+  "name": "Send To Bluetooth Device", 
+  "icons": {
+    "60": "/style/icons/60/Bluetooth.png", 
+    "120": "/style/icons/Bluetooth.png"
+  }, 
+  "orientation": "default", 
+  "description": "Gaia Bluetooth Transfer", 
+  "role": "system", 
+  "launch_path": "/transfer.html", 
   "permissions": {
-    "bluetooth":{},
-    "desktop-notification":{},
-    "settings":{ "access": "readwrite" }
+    "settings": {
+      "access": "readwrite"
+    }, 
+    "desktop-notification": {}, 
+    "bluetooth": {}
+  }, 
+  "type": "certified", 
+  "locales": {
+    "fr": {
+      "name": "Transfert Bluetooth", 
+      "description": "Transfert Bluetooth de Gaia"
+    }, 
+    "ro": {
+      "name": "Transfer Bluetooth", 
+      "description": "Transfer Bluetooth Gaia"
+    }, 
+    "en-US": {
+      "name": "Bluetooth Transfer", 
+      "description": "Gaia Bluetooth Transfer"
+    }, 
+    "it": {
+      "name": "Trasferimento bluetooth", 
+      "description": "Trasferimento bluetooth Gaia"
+    }
+  }, 
+  "developer": {
+    "url": "https://github.com/mozilla-b2g/gaia", 
+    "name": "The Gaia Team"
   }
 }

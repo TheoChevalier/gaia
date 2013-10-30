@@ -1,64 +1,88 @@
 {
-  "name": "Music",
-  "description": "Gaia Music",
-  "type": "certified",
-  "launch_path": "/index.html#mix",
-  "developer": {
-    "name": "The Gaia Team",
-    "url": "https://github.com/mozilla-b2g/gaia"
-  },
-  "permissions": {
-    "storage":{},
-    "device-storage:music":{ "access": "readwrite" },
-    "settings":{ "access": "readonly" },
-    "deprecated-hwvideo":{},
-    "bluetooth":{},
-    "audio-channel-content":{}
-  },
   "activities": {
-    "pick": {
-      "filters": {
-        "type": ["audio/*", "audio/mpeg", "audio/ogg", "audio/mp4"]
-       },
-      "disposition": "inline",
-      "returnValue": true,
-      "href": "/index.html#pick"
-    },
     "open": {
+      "href": "/open.html", 
+      "returnValue": true, 
+      "disposition": "inline", 
       "filters": {
-        "type": ["audio/mpeg", "audio/ogg", "audio/mp4", "audio/amr"]
-       },
-      "disposition": "inline",
-      "returnValue": true,
-      "href": "/open.html"
+        "type": [
+          "audio/mpeg", 
+          "audio/ogg", 
+          "audio/mp4", 
+          "audio/amr"
+        ]
+      }
+    }, 
+    "pick": {
+      "href": "/index.html#pick", 
+      "returnValue": true, 
+      "disposition": "inline", 
+      "filters": {
+        "type": [
+          "audio/*", 
+          "audio/mpeg", 
+          "audio/ogg", 
+          "audio/mp4"
+        ]
+      }
     }
-  },
-  "locales": {
-    "ar": {
-      "name": "موسيقى",
-      "description": "Gaia موسيقى"
-    },
-    "en-US": {
-      "name": "Music",
-      "description": "Gaia Music"
-    },
-    "fr": {
-      "name": "Musique",
-      "description": "Lecteur audio Gaia"
-    },
-    "zh-TW": {
-      "name": "音樂",
-      "description": "Gaia 音樂"
-    }
-  },
-  "default_locale": "en-US",
+  }, 
+  "name": "Music", 
+  "default_locale": "en-US", 
   "icons": {
-    "60": "/style/icons/Music_60.png",
-    "90": "/style/icons/Music_90.png",
+    "60": "/style/icons/Music_60.png", 
+    "90": "/style/icons/Music_90.png", 
     "120": "/style/icons/Music_120.png"
-  },
-  "orientation": "default",
+  }, 
+  "orientation": "default", 
+  "description": "Gaia Music", 
   "messages": [
-     { "media-button": "/index.html#mix" }
-  ]
+    {
+      "media-button": "/index.html#mix"
+    }
+  ], 
+  "launch_path": "/index.html#mix", 
+  "permissions": {
+    "audio-channel-content": {}, 
+    "deprecated-hwvideo": {}, 
+    "settings": {
+      "access": "readonly"
+    }, 
+    "storage": {}, 
+    "bluetooth": {}, 
+    "device-storage:music": {
+      "access": "readwrite"
+    }
+  }, 
+  "type": "certified", 
+  "locales": {
+    "fr": {
+      "name": "Musique", 
+      "description": "Lecteur audio de Gaia"
+    }, 
+    "zh-TW": {
+      "name": "\u97f3\u6a02", 
+      "description": "Gaia \u97f3\u6a02"
+    }, 
+    "en-US": {
+      "name": "Music", 
+      "description": "Gaia Music"
+    }, 
+    "it": {
+      "name": "Musica", 
+      "description": "Musica Gaia"
+    }, 
+    "ar": {
+      "name": "\u0645\u0648\u0633\u064a\u0642\u0649", 
+      "description": "Gaia \u0645\u0648\u0633\u064a\u0642\u0649"
+    }, 
+    "ro": {
+      "name": "Muzic\u0103", 
+      "description": "Muzic\u0103 Gaia"
+    }
+  }, 
+  "developer": {
+    "url": "https://github.com/mozilla-b2g/gaia", 
+    "name": "The Gaia Team"
+  }
 }

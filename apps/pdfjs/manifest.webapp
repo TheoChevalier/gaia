@@ -1,36 +1,50 @@
 {
-  "name": "PDF Viewer",
-  "description": "Portable Document Format (PDF) Viewer",
-  "type": "certified",
-  "role": "system",
-  "developer": {
-    "name": "The pdf.js Team",
-    "url": "https://github.com/mozilla/pdf.js"
-  },
-  "locales": {
-    "en-US": {
-      "name": "PDF Viewer",
-      "description": "Portable Document Format (PDF) Viewer"
-    }
-  },
-  "default_locale": "en-US",
-  "icons": {
-    "48": "/icon.png",
-    "64": "/icon64.png"
-  },
-  "orientation": "default",
   "activities": {
-    "view" : {
+    "view": {
+      "returnValue": true, 
+      "href": "/content/web/viewer.html", 
+      "disposition": "inline", 
       "filters": {
         "type": "application/pdf"
-      },
-      "disposition": "inline",
-      "href": "/content/web/viewer.html",
-      "returnValue": true
+      }
     }
-  },
+  }, 
+  "name": "PDF Viewer", 
+  "default_locale": "en-US", 
+  "icons": {
+    "64": "/icon64.png", 
+    "48": "/icon.png"
+  }, 
+  "orientation": "default", 
+  "description": "Portable Document Format (PDF) Viewer", 
+  "role": "system", 
   "permissions": {
-    "systemXHR":{},
-    "settings":{ "access": "readonly" }
+    "systemXHR": {}, 
+    "settings": {
+      "access": "readonly"
+    }
+  }, 
+  "type": "certified", 
+  "locales": {
+    "fr": {
+      "name": "Lecteur PDF", 
+      "description": "Lecteur PDF (Portable Document Format)"
+    }, 
+    "ro": {
+      "name": "Vizualizator PDF", 
+      "description": "Vizualizator Portable Document Format(PDF)"
+    }, 
+    "en-US": {
+      "name": "PDF Viewer", 
+      "description": "Portable Document Format (PDF) Viewer"
+    }, 
+    "it": {
+      "name": "Visualizzatore PDF", 
+      "description": "Visualizzatore file PDF"
+    }
+  }, 
+  "developer": {
+    "url": "https://github.com/mozilla/pdf.js", 
+    "name": "The pdf.js Team"
   }
 }

@@ -1,74 +1,100 @@
 {
-  "name": "E-Mail",
-  "description": "Gaia E-Mail",
-  "type": "certified",
-  "launch_path": "/index.html",
-  "developer": {
-    "name": "The Gaia Team",
-    "url": "https://github.com/mozilla-b2g/gaia"
-  },
-  "messages": [
-    { "alarm": "/index.html" },
-    { "notification": "/index.html" }
-  ],
-  "permissions": {
-    "alarms":{},
-    "audio-channel-notification":{},
-    "contacts":{ "access": "readcreate" },
-    "desktop-notification":{},
-    "storage":{},
-    "device-storage:sdcard":{ "access": "readcreate" },
-    "systemXHR":{},
-    "settings":{ "access": "readonly" },
-    "tcp-socket":{}
-  },
-  "locales": {
-    "ar": {
-      "name": "E-Mail",
-      "description": "Gaia E-Mail"
-    },
-    "en-US": {
-      "name": "E-Mail",
-      "description": "Gaia E-Mail"
-    },
-    "fr": {
-      "name": "E-Mail",
-      "description": "Gaia E-Mail"
-    },
-    "zh-TW": {
-      "name": "E-Mail",
-      "description": "Gaia E-Mail"
-    }
-  },
-  "default_locale": "en-US",
-  "icons": {
-    "79": "/style/icons/Email_90.png",
-    "60": "/style/icons/Email_60.png",
-    "120": "/style/icons/Email_120.png"
-  },
   "activities": {
     "new": {
+      "returnValue": true, 
+      "disposition": "window", 
       "filters": {
         "type": "mail"
-      },
-      "disposition": "window",
-      "returnValue": true
-    },
+      }
+    }, 
     "share": {
+      "returnValue": true, 
+      "disposition": "window", 
       "filters": {
-        "type": ["audio/*", "image/*", "url", "video/*"]
-      },
-      "disposition": "window",
-      "returnValue": true
-    },
+        "type": [
+          "audio/*", 
+          "image/*", 
+          "url", 
+          "video/*"
+        ]
+      }
+    }, 
     "view": {
       "filters": {
-        "type": "url",
-        "url": { "required":true, "pattern":"mailto:.{1,16384}" },
-        "disposition": "window",
-        "returnValue": true
+        "url": {
+          "pattern": "mailto:.{1,16384}", 
+          "required": true
+        }, 
+        "type": "url", 
+        "returnValue": true, 
+        "disposition": "window"
       }
     }
-  },
-  "orientation": "default"
+  }, 
+  "name": "E-Mail", 
+  "default_locale": "en-US", 
+  "icons": {
+    "60": "/style/icons/Email_60.png", 
+    "120": "/style/icons/Email_120.png", 
+    "79": "/style/icons/Email_90.png"
+  }, 
+  "orientation": "default", 
+  "description": "Gaia E-Mail", 
+  "messages": [
+    {
+      "alarm": "/index.html"
+    }, 
+    {
+      "notification": "/index.html"
+    }
+  ], 
+  "launch_path": "/index.html", 
+  "permissions": {
+    "device-storage:sdcard": {
+      "access": "readcreate"
+    }, 
+    "desktop-notification": {}, 
+    "contacts": {
+      "access": "readcreate"
+    }, 
+    "settings": {
+      "access": "readonly"
+    }, 
+    "storage": {}, 
+    "systemXHR": {}, 
+    "audio-channel-notification": {}, 
+    "alarms": {}, 
+    "tcp-socket": {}
+  }, 
+  "type": "certified", 
+  "locales": {
+    "fr": {
+      "name": "Courriel", 
+      "description": "Client de messagerie de Gaia"
+    }, 
+    "zh-TW": {
+      "name": "E-Mail", 
+      "description": "Gaia E-Mail"
+    }, 
+    "en-US": {
+      "name": "E-Mail", 
+      "description": "Gaia E-Mail"
+    }, 
+    "it": {
+      "name": "Email", 
+      "description": "Email Gaia"
+    }, 
+    "ar": {
+      "name": "E-Mail", 
+      "description": "Gaia E-Mail"
+    }, 
+    "ro": {
+      "name": "Email", 
+      "description": "Email Gaia"
+    }
+  }, 
+  "developer": {
+    "url": "https://github.com/mozilla-b2g/gaia", 
+    "name": "The Gaia Team"
+  }
 }

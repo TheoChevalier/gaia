@@ -1,59 +1,74 @@
 {
-  "name": "Homescreen",
-  "description": "Gaia Homescreen",
-  "launch_path": "/index.html#root",
-  "type": "certified",
-  "role": "homescreen",
-  "developer": {
-    "name": "The Gaia Team",
-    "url": "https://github.com/andreasgal/gaia"
-  },
-  "permissions": {
-    "mobileconnection":{},
-    "webapps-manage":{},
-    "systemXHR":{},
-    "settings":{ "access": "readwrite" },
-    "open-remote-window":{},
-    "storage":{},
-    "geolocation": {},
-    "alarms": {},
-    "power":{}
-  },
-  "locales": {
-    "ar": {
-      "name": "الشاشة الرئيسية",
-      "description": "Gaia الشاشة الرئيسية"
-    },
-    "en-US": {
-      "name": "Homescreen",
-      "description": "Gaia Homescreen"
-    },
-    "fr": {
-      "name": "Écran d’accueil",
-      "description": "Écran d’accueil Gaia"
-    },
-    "zh-TW": {
-      "name": "主畫面",
-      "description": "Gaia 主畫面"
-    }
-  },
-  "default_locale": "en-US",
-  "icons": {
-    "30": "/style/icons/HomeScreen.png"
-  },
-  "orientation": "default",
   "activities": {
     "save-bookmark": {
+      "returnValue": true, 
+      "href": "/save-bookmark.html", 
+      "disposition": "inline", 
       "filters": {
-        "type": "url",
-        "url": { "required":true, "pattern":"https?:.{1,16384}" }
-      },
-      "disposition": "inline",
-      "href": "/save-bookmark.html",
-      "returnValue": true
+        "url": {
+          "pattern": "https?:.{1,16384}", 
+          "required": true
+        }, 
+        "type": "url"
+      }
     }
-  },
+  }, 
+  "name": "Homescreen", 
+  "default_locale": "en-US", 
+  "icons": {
+    "30": "/style/icons/HomeScreen.png"
+  }, 
+  "orientation": "default", 
+  "description": "Gaia Homescreen", 
   "messages": [
-    { "alarm": "/index.html" }
-  ]
+    {
+      "alarm": "/index.html"
+    }
+  ], 
+  "role": "homescreen", 
+  "launch_path": "/index.html#root", 
+  "permissions": {
+    "geolocation": {}, 
+    "power": {}, 
+    "open-remote-window": {}, 
+    "settings": {
+      "access": "readwrite"
+    }, 
+    "storage": {}, 
+    "systemXHR": {}, 
+    "alarms": {}, 
+    "mobileconnection": {}, 
+    "webapps-manage": {}
+  }, 
+  "type": "certified", 
+  "locales": {
+    "fr": {
+      "name": "\u00c9cran d\u2019accueil", 
+      "description": "\u00c9cran d\u2019accueil de Gaia"
+    }, 
+    "zh-TW": {
+      "name": "\u4e3b\u756b\u9762", 
+      "description": "Gaia \u4e3b\u756b\u9762"
+    }, 
+    "en-US": {
+      "name": "Homescreen", 
+      "description": "Gaia Homescreen"
+    }, 
+    "it": {
+      "name": "Schermata principale", 
+      "description": "Schermata principale Gaia"
+    }, 
+    "ar": {
+      "name": "\u0627\u0644\u0634\u0627\u0634\u0629 \u0627\u0644\u0631\u0626\u064a\u0633\u064a\u0629", 
+      "description": "Gaia \u0627\u0644\u0634\u0627\u0634\u0629 \u0627\u0644\u0631\u0626\u064a\u0633\u064a\u0629"
+    }, 
+    "ro": {
+      "name": "Ecran principal", 
+      "description": "Ecran principal Gaia"
+    }
+  }, 
+  "developer": {
+    "url": "https://github.com/andreasgal/gaia", 
+    "name": "The Gaia Team"
+  }
 }

@@ -1,36 +1,53 @@
 {
-  "name": "System Ringtones",
-  "description": "Gaia Ringtone Picker",
-  "type": "certified",
-  "role": "system",
-  "orientation": "default",
-  "developer": {
-    "name": "The Gaia Team",
-    "url": "https://github.com/mozilla-b2g/gaia"
-  },
-  "permissions": {
-    "settings":{ "access": "readonly" }
-  },
   "activities": {
     "pick": {
+      "href": "/pick.html", 
+      "returnValue": true, 
+      "disposition": "inline", 
       "filters": {
-        "type": ["ringtone", "alerttone"]
-       },
-      "disposition": "inline",
-      "returnValue": true,
-      "href": "/pick.html"
+        "type": [
+          "ringtone", 
+          "alerttone"
+        ]
+      }
     }
-  },
-  "locales": {
-    "en-US": {
-      "name": "System Ringtones",
-      "description": "Gaia Ringtone Picker"
-    }
-  },
+  }, 
+  "orientation": "default", 
+  "default_locale": "en-US", 
   "icons": {
-    "60": "/style/icons/Ringtones_60.png",
-    "90": "/style/icons/Ringtones_90.png",
+    "60": "/style/icons/Ringtones_60.png", 
+    "90": "/style/icons/Ringtones_90.png", 
     "120": "/style/icons/Ringtones_120.png"
-  },
-  "default_locale": "en-US"
+  }, 
+  "description": "Gaia Ringtone Picker", 
+  "name": "System Ringtones", 
+  "role": "system", 
+  "permissions": {
+    "settings": {
+      "access": "readonly"
+    }
+  }, 
+  "type": "certified", 
+  "locales": {
+    "fr": {
+      "name": "Sonneries syst\u00e8me", 
+      "description": "S\u00e9lecteur de sonneries de Gaia"
+    }, 
+    "ro": {
+      "name": "Tonuri de apel \u00een sistem", 
+      "description": "Selector de tonuri de apel Gaia"
+    }, 
+    "en-US": {
+      "name": "System Ringtones", 
+      "description": "Gaia Ringtone Picker"
+    }, 
+    "it": {
+      "name": "Suonerie di sistema", 
+      "description": "Selezione suonerie Gaia"
+    }
+  }, 
+  "developer": {
+    "url": "https://github.com/mozilla-b2g/gaia", 
+    "name": "The Gaia Team"
+  }
 }
