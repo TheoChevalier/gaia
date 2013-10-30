@@ -518,8 +518,7 @@ var Carrier = {
         if (auto) {
           localize(opAutoSelectState, 'operator-networkSelect-auto');
         } else {
-          opAutoSelectState.dataset.l10nId = '';
-          opAutoSelectState.textContent = mode;
+          localize(opAutoSelectState, 'operator-networkSelect-manual');
           if (scan) {
             gOperatorNetworkList.scan();
           }
