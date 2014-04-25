@@ -1,4 +1,4 @@
 {
-  "name": "alert test",
-  "launch_path": "/index.html"
+  "launch_path": "/index.html", 
+  "name": "alert test"
 }

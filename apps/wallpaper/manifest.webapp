@@ -1,52 +1,66 @@
 {
-  "name": "Wallpaper",
-  "description": "Gaia Wallpaper Picker",
-  "type": "certified",
-  "role": "system",
-  "orientation": "default",
-  "developer": {
-    "name": "The Gaia Team",
-    "url": "https://github.com/mozilla-b2g/gaia"
-  },
-  "permissions": {
-    "settings":{ "access": "readwrite" }
-  },
   "activities": {
+    "share": {
+      "href": "/share.html", 
+      "returnValue": true, 
+      "disposition": "inline", 
+      "filters": {
+        "type": "image/*", 
+        "number": 1
+      }
+    }, 
+    "setwallpaper": {
+      "href": "/share.html", 
+      "returnValue": true, 
+      "disposition": "inline", 
+      "filters": {
+        "type": "image/*", 
+        "number": 1
+      }
+    }, 
     "pick": {
+      "href": "/pick.html", 
+      "returnValue": true, 
+      "disposition": "inline", 
       "filters": {
         "type": "wallpaper"
-       },
-      "disposition": "inline",
-      "returnValue": true,
-      "href": "/pick.html"
-    },
-    "share": {
-      "filters": {
-        "type": "image/*",
-        "number": 1
-       },
-      "disposition": "inline",
-      "returnValue": true,
-      "href": "/share.html"
-    },
-    "setwallpaper": {
-      "filters": {
-        "type": "image/*",
-        "number": 1
-       },
-      "disposition": "inline",
-      "returnValue": true,
-      "href": "/share.html"
+      }
     }
-  },
+  }, 
+  "orientation": "default", 
+  "default_locale": "en-US", 
   "icons": {
     "64": "/style/icons/64/Wallpaper.png"
-  },
-  "locales": {
-    "en-US": {
-      "name": "Wallpaper",
-      "description": "Gaia Wallpaper Picker"
+  }, 
+  "description": "Gaia Wallpaper Picker", 
+  "name": "Wallpaper", 
+  "role": "system", 
+  "permissions": {
+    "settings": {
+      "access": "readwrite"
     }
-  },
-  "default_locale": "en-US"
+  }, 
+  "type": "certified", 
+  "locales": {
+    "zh-TW": {
+      "name": "\u684c\u9762\u80cc\u666f", 
+      "description": "Gaia \u684c\u9762\u80cc\u666f\u6311\u9078\u5668"
+    }, 
+    "fr": {
+      "name": "Fond d\u2019\u00e9cran", 
+      "description": "S\u00e9lecteur de fond d\u2019\u00e9cran de Gaia"
+    }, 
+    "en-US": {
+      "name": "Wallpaper", 
+      "description": "Gaia Wallpaper Picker"
+    }, 
+    "ar": {
+      "name": "\u0635\u0648\u0631\u0629 \u062e\u0644\u0641\u064a\u0629", 
+      "description": "\u0645\u062a\u0635\u0641\u062d \u0635\u0648\u0631 \u0627\u0644\u062e\u0644\u0641\u064a\u0629"
+    }
+  }, 
+  "developer": {
+    "url": "https://github.com/mozilla-b2g/gaia", 
+    "name": "The Gaia Team"
+  }
 }

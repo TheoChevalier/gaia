@@ -1,71 +1,96 @@
 {
-  "name": "Video",
-  "description": "Gaia Video",
-  "type": "certified",
-  "launch_path": "/index.html",
-  "developer": {
-    "name": "The Gaia Team",
-    "url": "https://github.com/mozilla-b2g/gaia"
-  },
-  "fullscreen": true,
-  "permissions": {
-    "storage":{},
-    "device-storage:pictures":{ "access": "readwrite" },
-    "device-storage:videos":{ "access": "readwrite" },
-    "settings":{ "access": "readonly" },
-    "deprecated-hwvideo":{},
-    "audio-channel-content":{},
-    "nfc": { "access": "readwrite" }
-  },
-  "locales": {
-    "ar": {
-      "name": "فيديو",
-      "description": "Gaia فيديو"
-    },
-    "en-US": {
-      "name": "Video",
-      "description": "Gaia Video"
-    },
-    "fr": {
-      "name": "Vidéo",
-      "description": "Lecteur vidéo Gaia"
-    },
-    "zh-TW": {
-      "name": "影片",
-      "description": "Gaia 影片"
-    }
-  },
-  "default_locale": "en-US",
+  "fullscreen": true, 
+  "name": "Video", 
+  "default_locale": "en-US", 
   "icons": {
-    "60": "/style/icons/Video_60.png",
-    "90": "/style/icons/Video_90.png",
-    "120": "/style/icons/Video_120.png",
-    "135": "/style/icons/Video_135.png"
-  },
+    "60": "/style/icons/Video_60.png", 
+    "90": "/style/icons/Video_90.png", 
+    "135": "/style/icons/Video_135.png", 
+    "120": "/style/icons/Video_120.png"
+  }, 
+  "description": "Gaia Video", 
   "activities": {
+    "view": {
+      "returnValue": true, 
+      "href": "view.html", 
+      "disposition": "inline", 
+      "filters": {
+        "type": [
+          "video/webm", 
+          "video/mp4", 
+          "video/3gpp", 
+          "video/ogg", 
+          "video/rtsp"
+        ]
+      }
+    }, 
+    "open": {
+      "returnValue": true, 
+      "href": "view.html", 
+      "disposition": "inline", 
+      "filters": {
+        "type": [
+          "video/webm", 
+          "video/mp4", 
+          "video/3gpp", 
+          "video/ogg"
+        ]
+      }
+    }, 
     "pick": {
+      "href": "/index.html#pick", 
+      "returnValue": true, 
+      "disposition": "inline", 
       "filters": {
-        "type": ["video/*", "video/webm", "video/mp4", "video/3gpp", "video/ogg"]
-       },
-      "disposition": "inline",
-      "returnValue": true,
-      "href": "/index.html#pick"
-    },
-    "view" : {
-      "filters": {
-        "type": ["video/webm", "video/mp4", "video/3gpp", "video/ogg", "video/rtsp"]
-      },
-      "href": "view.html",
-      "disposition": "inline",
-      "returnValue": true
-    },
-    "open" : {
-      "filters": {
-        "type": ["video/webm", "video/mp4", "video/3gpp", "video/ogg"]
-      },
-      "href": "view.html",
-      "disposition": "inline",
-      "returnValue": true
+        "type": [
+          "video/*", 
+          "video/webm", 
+          "video/mp4", 
+          "video/3gpp", 
+          "video/ogg"
+        ]
+      }
     }
+  }, 
+  "launch_path": "/index.html", 
+  "permissions": {
+    "audio-channel-content": {}, 
+    "device-storage:pictures": {
+      "access": "readwrite"
+    }, 
+    "nfc": {
+      "access": "readwrite"
+    }, 
+    "settings": {
+      "access": "readonly"
+    }, 
+    "device-storage:videos": {
+      "access": "readwrite"
+    }, 
+    "storage": {}, 
+    "deprecated-hwvideo": {}
+  }, 
+  "type": "certified", 
+  "locales": {
+    "zh-TW": {
+      "name": "\u5f71\u7247\u5eab", 
+      "description": "Gaia \u5f71\u7247\u5eab"
+    }, 
+    "en-US": {
+      "name": "Video", 
+      "description": "Gaia Video"
+    }, 
+    "ar": {
+      "name": "\u0641\u064a\u062f\u064a\u0648", 
+      "description": "\u0627\u0644\u0641\u064a\u062f\u064a\u0648"
+    }, 
+    "fr": {
+      "name": "Vid\u00e9o", 
+      "description": "Lecteur vid\u00e9o de Gaia"
+    }
+  }, 
+  "developer": {
+    "url": "https://github.com/mozilla-b2g/gaia", 
+    "name": "The Gaia Team"
   }
 }

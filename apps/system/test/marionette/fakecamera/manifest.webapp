@@ -1,11 +1,11 @@
 {
-  "name": "Fake Music",
-  "description": "A fake music app",
-  "type": "certified",
-  "launch_path": "/index.html",
-  "fullscreen": true,
+  "fullscreen": true, 
+  "name": "Fake Music", 
+  "description": "A fake music app", 
+  "launch_path": "/index.html", 
+  "type": "certified", 
   "developer": {
-    "name": "The Gaia Team",
-    "url": "https://github.com/mozilla-b2g/gaia"
+    "url": "https://github.com/mozilla-b2g/gaia", 
+    "name": "The Gaia Team"
   }
 }

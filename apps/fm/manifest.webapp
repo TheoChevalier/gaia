@@ -1,42 +1,44 @@
 {
-  "name": "FM Radio",
-  "description": "Gaia FM Radio",
-  "type": "certified",
-  "launch_path": "/index.html",
-  "developer": {
-    "name": "The Gaia Team",
-    "url": "https://github.com/mozilla-b2g/gaia"
-  },
-  "permissions": {
-    "storage":{},
-    "fmradio":{},
-    "settings":{ "access": "readonly" },
-    "speaker-control":{}
-  },
-  "locales": {
-    "ar": {
-      "name": "FM Radio",
-      "description": "Gaia FM Radio"
-    },
-    "en-US": {
-      "name": "FM Radio",
-      "description": "Gaia FM Radio"
-    },
-    "fr": {
-      "name": "Radio FM",
-      "description": "Radio FM Gaia"
-    },
-    "zh-TW": {
-      "name": "收音机",
-      "description": "收音机"
-    }
-  },
-  "default_locale": "en-US",
+  "name": "FM Radio", 
+  "default_locale": "en-US", 
   "icons": {
-    "135": "/style/icons/Fm_135.png",
-    "128": "/style/icons/Fm_120.png",
-    "90": "/style/icons/Fm_90.png",
-    "60": "/style/icons/Fm_60.png"
-  },
-  "orientation": "default"
+    "128": "/style/icons/Fm_120.png", 
+    "90": "/style/icons/Fm_90.png", 
+    "60": "/style/icons/Fm_60.png", 
+    "135": "/style/icons/Fm_135.png"
+  }, 
+  "orientation": "default", 
+  "description": "Gaia FM Radio", 
+  "launch_path": "/index.html", 
+  "permissions": {
+    "speaker-control": {}, 
+    "fmradio": {}, 
+    "storage": {}, 
+    "settings": {
+      "access": "readonly"
+    }
+  }, 
+  "type": "certified", 
+  "locales": {
+    "zh-TW": {
+      "name": "FM \u6536\u97f3\u6a5f", 
+      "description": "Gaia FM \u6536\u97f3\u6a5f"
+    }, 
+    "en-US": {
+      "name": "FM Radio", 
+      "description": "Gaia FM Radio"
+    }, 
+    "ar": {
+      "name": "\u0627\u0641 \u0627\u0645 \u0631\u0627\u062f\u064a\u0648", 
+      "description": "\u0627\u0644\u0631\u0627\u062f\u064a\u0648"
+    }, 
+    "fr": {
+      "name": "Radio FM", 
+      "description": "Radio FM de Gaia"
+    }
+  }, 
+  "developer": {
+    "url": "https://github.com/mozilla-b2g/gaia", 
+    "name": "The Gaia Team"
+  }
 }

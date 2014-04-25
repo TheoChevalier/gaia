@@ -1,48 +1,67 @@
 {
-  "name": "Purchased Media",
-  "description": "Download and manage forward locked music, ringtones and wallpaper",
-  "type": "certified",
-  "role": "system",
-  "developer": {
-    "name": "The Gaia Team",
-    "url": "https://github.com/mozilla-b2g/gaia"
-  },
-  "locales": {
-    "en-US": {
-      "name": "Purchased Media",
-      "description": "Download and manage forward locked music, ringtones and wallpaper"
-    }
-  },
-  "default_locale": "en-US",
   "activities": {
-    "view" : {
+    "pick": {
+      "returnValue": true, 
+      "href": "pick.html", 
+      "disposition": "inline", 
+      "filters": {
+        "includeLocked": {
+          "required": true, 
+          "value": true
+        }, 
+        "type": [
+          "wallpaper", 
+          "ringtone"
+        ]
+      }
+    }, 
+    "view": {
+      "returnValue": true, 
+      "href": "download.html", 
+      "disposition": "inline", 
       "filters": {
         "type": "application/vnd.oma.dd+xml"
-      },
-      "disposition": "inline",
-      "href": "download.html",
-      "returnValue": true
-    },
-    "pick" : {
-      "filters": {
-        "type": ["wallpaper", "ringtone"],
-        "includeLocked": {
-          "required": true,
-          "value": true
-        }
-      },
-      "disposition": "inline",
-      "href": "pick.html",
-      "returnValue": true
+      }
     }
-  },
-  "permissions": {
-    "systemXHR":{},
-    "storage":{},
-    "settings":{ "access": "readwrite" },
-    "device-storage:music":{ "access": "readwrite" }
-  },
+  }, 
+  "name": "Purchased Media", 
+  "default_locale": "en-US", 
   "icons": {
     "60": "/style/icons/60/fl.png"
+  }, 
+  "description": "Download and manage forward locked music, ringtones and wallpaper", 
+  "role": "system", 
+  "permissions": {
+    "device-storage:music": {
+      "access": "readwrite"
+    }, 
+    "systemXHR": {}, 
+    "storage": {}, 
+    "settings": {
+      "access": "readwrite"
+    }
+  }, 
+  "type": "certified", 
+  "locales": {
+    "zh-TW": {
+      "name": "\u5df2\u8cfc\u8cb7\u7684\u5a92\u9ad4", 
+      "description": "\u4e0b\u8f09\u8207\u7ba1\u7406\u9396\u5b9a\u7684\u97f3\u6a02\u3001\u9234\u8072\u53ca\u684c\u5e03"
+    }, 
+    "fr": {
+      "name": "M\u00e9dias achet\u00e9s", 
+      "description": "T\u00e9l\u00e9charger et g\u00e9rer les chansons, sonneries et fonds d\u2019\u00e9cran verrouill\u00e9s"
+    }, 
+    "en-US": {
+      "name": "Purchased Media", 
+      "description": "Download and manage forward locked music, ringtones and wallpaper"
+    }, 
+    "ar": {
+      "name": "\u0634\u0631\u0627\u0621 \u0648\u0633\u0627\u0626\u0637", 
+      "description": "\u062a\u062d\u0645\u064a\u0644 \u0648 \u0625\u062f\u0627\u0631\u0629 \u0645\u0628\u0627\u0634\u0631 \u0644\u0644\u0623\u063a\u0627\u0646\u064a \u0648 \u0627\u0644\u0646\u063a\u0645\u0627\u062a \u0648 \u0627\u0644\u062e\u0644\u0641\u064a\u0627\u062a"
+    }
+  }, 
+  "developer": {
+    "url": "https://github.com/mozilla-b2g/gaia", 
+    "name": "The Gaia Team"
   }
 }

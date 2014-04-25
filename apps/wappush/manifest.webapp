@@ -1,31 +1,49 @@
 {
-  "name": "WAP Push manager",
-  "description": "Receives, filters and displays WAP Push messages",
-  "type": "certified",
-  "role": "system",
-  "launch_path": "/index.html",
-  "developer": {
-    "name": "The Gaia Team",
-    "url": "https://github.com/mozilla-b2g/gaia"
-  },
-  "locales": {
-    "en-US": {
-      "name": "WAP Push manager",
-      "description": "Receives, filters and displays WAP Push messages"
-    }
-  },
-  "default_locale": "en-US",
+  "name": "WAP Push manager", 
+  "default_locale": "en-US", 
   "icons": {
     "30": "/style/icons/wappush.png"
-  },
-  "orientation": "default",
+  }, 
+  "orientation": "default", 
+  "description": "Receives, filters and displays WAP Push messages", 
   "messages": [
-     { "notification": "/index.html" },
-     { "wappush-received": "/index.html" }
-  ],
+    {
+      "notification": "/index.html"
+    }, 
+    {
+      "wappush-received": "/index.html"
+    }
+  ], 
+  "role": "system", 
+  "launch_path": "/index.html", 
   "permissions": {
-    "desktop-notification": {},
-    "settings": { "access": "readwrite" },
-    "wappush": {}
+    "wappush": {}, 
+    "desktop-notification": {}, 
+    "settings": {
+      "access": "readwrite"
+    }
+  }, 
+  "type": "certified", 
+  "locales": {
+    "zh-TW": {
+      "name": "WAP \u63a8\u64ad\u7ba1\u7406\u54e1", 
+      "description": "\u63a5\u6536\u3001\u904e\u6ffe\u4e26\u986f\u793a WAP \u63a8\u64ad\u8a0a\u606f"
+    }, 
+    "fr": {
+      "name": "Gestionnaire Push WAP", 
+      "description": "Re\u00e7oit, filtre et affiche les messages Push WAP"
+    }, 
+    "en-US": {
+      "name": "WAP Push manager", 
+      "description": "Receives, filters and displays WAP Push messages"
+    }, 
+    "ar": {
+      "name": "\u0645\u062f\u064a\u0631 WAP Push", 
+      "description": "\u064a\u0633\u062a\u0642\u0628\u0644,\u064a\u0631\u0634\u062d \u0648 \u064a\u0639\u0631\u0636 \u0631\u0633\u0627\u0626\u0644 WAP Push"
+    }
+  }, 
+  "developer": {
+    "url": "https://github.com/mozilla-b2g/gaia", 
+    "name": "The Gaia Team"
   }
 }

@@ -1,54 +1,72 @@
 {
-  "name": "Find My Device",
-  "type": "certified",
-  "role": "system",
-  "description": "Find My Device helps find, lock and erase a lost phone",
-  "launch_path": "/index.html",
-  "developer": {
-    "name": "The Gaia Team",
-    "url": "https://github.com/mozilla-b2g/gaia"
-  },
-  "permissions": {
-    "alarms": {},
-    "device-storage:sdcard":{ "access": "readwrite" },
-    "device-storage:pictures":{ "access": "readwrite" },
-    "device-storage:videos":{ "access": "readwrite" },
-    "device-storage:music":{ "access": "readcreate" },
-    "device-storage:apps":{ "access": "readonly" },
-    "geolocation":{},
-    "permissions":{},
-    "power":{},
-    "push": {},
-    "settings":{ "access": "readwrite" },
-    "systemXHR": {}
-  },
-  "locales": {
-    "en-US": {
-      "name": "Find My Device",
-      "description": "Find My Device helps find, lock and erase a lost phone"
-    }
-  },
+  "name": "Find My Device", 
+  "description": "Find My Device helps find, lock and erase a lost phone", 
   "messages": [
-    { "alarm": "/index.html" },
-    { "push": "/index.html" },
-    { "push-register": "/index.html" }
-  ],
+    {
+      "alarm": "/index.html"
+    }, 
+    {
+      "push": "/index.html"
+    }, 
+    {
+      "push-register": "/index.html"
+    }
+  ], 
   "connections": {
     "findmydevice-wakeup": {
-      "description": "Wake up Find My Device from the System app",
       "rules": {
         "manifestURLs": [
           "app://system.gaiamobile.org/manifest.webapp"
         ]
-      }
-    },
+      }, 
+      "description": "Wake up Find My Device from the System app"
+    }, 
     "findmydevice-test": {
-      "description": "Manually trigger commands for testing",
       "rules": {
         "manifestURLs": [
           "app://test-findmydevice.gaiamobile.org/manifest.webapp"
         ]
-      }
+      }, 
+      "description": "Manually trigger commands for testing"
     }
+  }, 
+  "role": "system", 
+  "launch_path": "/index.html", 
+  "permissions": {
+    "geolocation": {}, 
+    "device-storage:sdcard": {
+      "access": "readwrite"
+    }, 
+    "power": {}, 
+    "device-storage:apps": {
+      "access": "readonly"
+    }, 
+    "device-storage:videos": {
+      "access": "readwrite"
+    }, 
+    "settings": {
+      "access": "readwrite"
+    }, 
+    "device-storage:pictures": {
+      "access": "readwrite"
+    }, 
+    "device-storage:music": {
+      "access": "readcreate"
+    }, 
+    "systemXHR": {}, 
+    "push": {}, 
+    "alarms": {}, 
+    "permissions": {}
+  }, 
+  "type": "certified", 
+  "locales": {
+    "en-US": {
+      "name": "Find My Device", 
+      "description": "Find My Device helps find, lock and erase a lost phone"
+    }
+  }, 
+  "developer": {
+    "url": "https://github.com/mozilla-b2g/gaia", 
+    "name": "The Gaia Team"
   }
 }

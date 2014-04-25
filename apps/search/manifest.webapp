@@ -1,41 +1,57 @@
 {
-  "name": "Search Results",
-  "type": "certified",
-  "role": "search",
-  "description": "Search Results",
-  "launch_path": "/index.html",
-  "developer": {
-    "name": "The Gaia Team",
-    "url": "https://github.com/mozilla-b2g/gaia"
-  },
-  "locales": {
-    "en-US": {
-      "name": "Search Results",
-      "description": "Search Results"
-    }
-  },
-  "default_locale": "en-US",
+  "name": "Search Results", 
+  "default_locale": "en-US", 
   "icons": {
     "128": "/style/icons/Blank.png"
-  },
-  "permissions": {
-    "webapps-manage":{},
-    "open-remote-window":{},
-    "settings":{ "access": "readwrite" },
-    "systemXHR":{},
-    "contacts":{ "access": "readonly" }
-  },
-  "connections": {
-    "search": {
-      "handler_path": "index.html",
-      "description": "Proxies search to copied search app. Should be moved to the search app manifest if we split the app up.",
-      "rules": {}
-    }
-  },
+  }, 
+  "description": "Search Results", 
   "datastores-access": {
     "places": {
-      "access": "readonly",
+      "access": "readonly", 
       "description": "Stores data about browsing history."
     }
+  }, 
+  "connections": {
+    "search": {
+      "rules": {}, 
+      "handler_path": "index.html", 
+      "description": "Proxies search to copied search app. Should be moved to the search app manifest if we split the app up."
+    }
+  }, 
+  "role": "search", 
+  "launch_path": "/index.html", 
+  "permissions": {
+    "systemXHR": {}, 
+    "contacts": {
+      "access": "readonly"
+    }, 
+    "webapps-manage": {}, 
+    "open-remote-window": {}, 
+    "settings": {
+      "access": "readwrite"
+    }
+  }, 
+  "type": "certified", 
+  "locales": {
+    "zh-TW": {
+      "name": "\u641c\u5c0b\u7d50\u679c", 
+      "description": "\u641c\u5c0b\u7d50\u679c"
+    }, 
+    "fr": {
+      "name": "R\u00e9sultats de recherche", 
+      "description": "R\u00e9sultats de recherche"
+    }, 
+    "en-US": {
+      "name": "Search Results", 
+      "description": "Search Results"
+    }, 
+    "ar": {
+      "name": "\u0646\u062a\u0627\u0626\u062c \u0627\u0644\u0628\u062d\u062b", 
+      "description": "\u0646\u062a\u0627\u0626\u062c \u0627\u0644\u0628\u062d\u062b"
+    }
+  }, 
+  "developer": {
+    "url": "https://github.com/mozilla-b2g/gaia", 
+    "name": "The Gaia Team"
   }
 }

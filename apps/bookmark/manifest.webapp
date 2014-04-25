@@ -1,44 +1,50 @@
 {
-  "name": "Bookmark",
-  "description": "Bookmark Manager",
-  "type": "certified",
-  "role": "system",
-  "orientation": "default",
-  "developer": {
-    "name": "The Gaia Team",
-    "url": "https://github.com/mozilla-b2g/gaia"
-  },
   "activities": {
     "save-bookmark": {
+      "returnValue": true, 
+      "href": "/save.html", 
+      "disposition": "inline", 
       "filters": {
-        "type": "url",
-        "url": { "required":true, "pattern":"https?:.{1,16384}" }
-      },
-      "disposition": "inline",
-      "href": "/save.html",
-      "returnValue": true
-    },
+        "url": {
+          "pattern": "https?:.{1,16384}", 
+          "required": true
+        }, 
+        "type": "url"
+      }
+    }, 
     "remove-bookmark": {
+      "returnValue": true, 
+      "href": "/remove.html", 
+      "disposition": "inline", 
       "filters": {
-        "type": "url",
-        "url": { "required":true, "pattern":"https?:.{1,16384}" }
-      },
-      "disposition": "inline",
-      "href": "/remove.html",
-      "returnValue": true
+        "url": {
+          "pattern": "https?:.{1,16384}", 
+          "required": true
+        }, 
+        "type": "url"
+      }
     }
-  },
-  "locales": {
-    "en-US": {
-      "name": "Bookmark",
-      "description": "Bookmark Manager"
-    }
-  },
-  "default_locale": "en-US",
+  }, 
+  "orientation": "default", 
+  "default_locale": "en-US", 
+  "description": "Bookmark Manager", 
+  "name": "Bookmark", 
+  "role": "system", 
   "datastores-owned": {
     "bookmarks_store": {
-      "access": "readwrite",
+      "access": "readwrite", 
       "description": "Stores bookmarks"
     }
+  }, 
+  "type": "certified", 
+  "locales": {
+    "en-US": {
+      "name": "Bookmark", 
+      "description": "Bookmark Manager"
+    }
+  }, 
+  "developer": {
+    "url": "https://github.com/mozilla-b2g/gaia", 
+    "name": "The Gaia Team"
   }
 }

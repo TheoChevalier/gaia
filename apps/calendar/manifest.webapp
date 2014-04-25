@@ -1,48 +1,54 @@
 {
-  "name": "Calendar",
-  "description": "Gaia Calendar",
-  "type": "certified",
-  "launch_path": "/index.html",
-  "developer": {
-    "name": "The Gaia Team",
-    "url": "https://github.com/mozilla-b2g/gaia"
-  },
-  "messages": [
-     { "alarm": "/index.html" },
-     { "notification": "/index.html" }
-  ],
-  "permissions": {
-    "systemXHR":{},
-    "settings":{ "access": "readonly" },
-    "alarms":{},
-    "browser": {},
-    "storage":{},
-    "desktop-notification":{}
-  },
-  "locales": {
-    "ar": {
-      "name": "Calendar",
-      "description": "Gaia Calendar"
-    },
-    "en-US": {
-      "name": "Calendar",
-      "description": "Gaia Calendar"
-    },
-    "fr": {
-      "name": "Agenda",
-      "description": "Agenda Gaia"
-    },
-    "zh-TW": {
-      "name": "Calendar",
-      "description": "Gaia Calendar"
-    }
-  },
-  "default_locale": "en-US",
+  "name": "Calendar", 
+  "default_locale": "en-US", 
   "icons": {
-    "60": "/style/icons/Calendar_60.png",
-    "90": "/style/icons/Calendar_90.png",
-    "120": "/style/icons/Calendar_120.png",
-    "135": "/style/icons/Calendar_135.png"
-  },
-  "orientation": "default"
+    "60": "/style/icons/Calendar_60.png", 
+    "90": "/style/icons/Calendar_90.png", 
+    "135": "/style/icons/Calendar_135.png", 
+    "120": "/style/icons/Calendar_120.png"
+  }, 
+  "orientation": "default", 
+  "description": "Gaia Calendar", 
+  "messages": [
+    {
+      "alarm": "/index.html"
+    }, 
+    {
+      "notification": "/index.html"
+    }
+  ], 
+  "launch_path": "/index.html", 
+  "permissions": {
+    "desktop-notification": {}, 
+    "settings": {
+      "access": "readonly"
+    }, 
+    "storage": {}, 
+    "systemXHR": {}, 
+    "alarms": {}, 
+    "browser": {}
+  }, 
+  "type": "certified", 
+  "locales": {
+    "zh-TW": {
+      "name": "\u884c\u4e8b\u66c6", 
+      "description": "Gaia \u884c\u4e8b\u66c6"
+    }, 
+    "en-US": {
+      "name": "Calendar", 
+      "description": "Gaia Calendar"
+    }, 
+    "ar": {
+      "name": "\u0627\u0644\u062a\u0642\u0648\u064a\u0645", 
+      "description": "\u062a\u0642\u0648\u064a\u0645 \u063a\u0627\u064a\u0627"
+    }, 
+    "fr": {
+      "name": "Agenda", 
+      "description": "Agenda de Gaia"
+    }
+  }, 
+  "developer": {
+    "url": "https://github.com/mozilla-b2g/gaia", 
+    "name": "The Gaia Team"
+  }
 }

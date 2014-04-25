@@ -1,36 +1,50 @@
 {
-  "name": "PDF Viewer",
-  "description": "Portable Document Format (PDF) Viewer",
-  "type": "certified",
-  "role": "system",
-  "developer": {
-    "name": "The pdf.js Team",
-    "url": "https://github.com/mozilla/pdf.js"
-  },
-  "locales": {
-    "en-US": {
-      "name": "PDF Viewer",
-      "description": "Portable Document Format (PDF) Viewer"
-    }
-  },
-  "default_locale": "en-US",
-  "icons": {
-    "48": "/icon.png",
-    "64": "/icon64.png"
-  },
-  "orientation": "default",
   "activities": {
-    "view" : {
+    "view": {
+      "returnValue": true, 
+      "href": "/content/web/viewer.html", 
+      "disposition": "inline", 
       "filters": {
         "type": "application/pdf"
-      },
-      "disposition": "inline",
-      "href": "/content/web/viewer.html",
-      "returnValue": true
+      }
     }
-  },
+  }, 
+  "name": "PDF Viewer", 
+  "default_locale": "en-US", 
+  "icons": {
+    "64": "/icon64.png", 
+    "48": "/icon.png"
+  }, 
+  "orientation": "default", 
+  "description": "Portable Document Format (PDF) Viewer", 
+  "role": "system", 
   "permissions": {
-    "systemXHR":{},
-    "settings":{ "access": "readonly" }
+    "systemXHR": {}, 
+    "settings": {
+      "access": "readonly"
+    }
+  }, 
+  "type": "certified", 
+  "locales": {
+    "zh-TW": {
+      "name": "PDF \u95b1\u8b80\u5668", 
+      "description": "\u53ef\u651c\u5f0f\u6587\u4ef6\u683c\u5f0f\uff08PDF\uff09\u6aa2\u8996\u5668"
+    }, 
+    "fr": {
+      "name": "Lecteur PDF", 
+      "description": "Lecteur PDF (Portable Document Format)"
+    }, 
+    "en-US": {
+      "name": "PDF Viewer", 
+      "description": "Portable Document Format (PDF) Viewer"
+    }, 
+    "ar": {
+      "name": "\u0639\u0627\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0640 PDF", 
+      "description": "\u0639\u0627\u0631\u0636 \u062a\u0646\u0633\u064a\u0642 \u0627\u0644\u0645\u0633\u062a\u0646\u062f\u0627\u062a \u0627\u0644\u0645\u062d\u0645\u0648\u0644\u0629 (PDF)"
+    }
+  }, 
+  "developer": {
+    "url": "https://github.com/mozilla/pdf.js", 
+    "name": "The pdf.js Team"
   }
 }
